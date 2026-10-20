@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat World 🐱</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff0fa;
+    background: linear-gradient(135deg, #180d28, #35133f, #170f30);
+    line-height: 1.6;
+}
+
+header {
+    padding: 18px;
+    text-align: center;
+    background: #24102f;
+    border-bottom: 2px solid #ff85d0;
+    box-shadow: 0 0 20px #d94db5;
+}
+
+header h1 {
+    color: #ff9cde;
+    font-size: clamp(28px, 5vw, 42px);
+    text-shadow: 0 0 15px #ff4db8;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #ff65c3;
+    color: #260d31;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+    background:
+        radial-gradient(circle at top, #a43e8e55, transparent 65%);
+}
+
+.hero h2 {
+    font-size: clamp(27px, 5vw, 40px);
+    color: #ffb2e5;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 22px;
+}
+
+.boton {
+    display: inline-block;
+    background: #ff72c6;
+    color: #2a1034;
+    padding: 12px 23px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ff72c6;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px #ff72c6;
+}
+
+section {
+    padding: 35px 20px;
+    max-width: 1100px;
+    margin: auto;
+    scroll-margin-top: 15px;
+}
+
+.titulo {
+    text-align: center;
+    color: #ff9cde;
+    font-size: clamp(24px, 4vw, 32px);
+    margin-bottom: 22px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: #2b183d;
+    border: 1px solid #d75bab;
+    border-radius: 20px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 0 14px #a73c9140;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 22px #ed69c6;
+}
+
+.gato {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    color: #ff9cde;
+    margin-bottom: 8px;
+}
+
+.dato {
+    background: #391c49;
+    border-left: 4px solid #ff85d0;
+    padding: 20px;
+    margin: 12px 0;
+    border-radius: 12px;
+}
+
+.dato h3 {
+    color: #ffb2e5;
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #170c24;
+    border-top: 1px solid #d75bab;
+    padding: 25px 15px;
+    color: #ffc8ec;
+    margin-top: 25px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 700px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 38px 18px;
+    }
+
+    section {
+        padding: 28px 16px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🐾 Cat World 🐾</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#razas">Razas</a>
+        <a href="#cuidados">Cuidados</a>
+        <a href="#datos">Curiosidades</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <h2>¡Bienvenido al mundo de los gatos! 🐱</h2>
+        <p>
+            Descubre el maravilloso mundo de los michis:
+            sus personalidades, cuidados y curiosidades.
+            ¡Un pequeño rincón para los amantes de los gatos!
+        </p>
+        <a class="boton" href="#razas">Descubrir más ✨</a>
+    </section>
+
+    <section id="razas">
+        <h2 class="titulo">🌸 Conoce algunas razas</h2>
+
+        <div class="tarjetas">
+            <article class="tarjeta">
+                <div class="gato">🐈</div>
+                <h3>Gato siamés</h3>
+                <p>Es conocido por sus ojos azules, su elegancia y su personalidad sociable.</p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="gato">🐈‍⬛</div>
+                <h3>Gato negro</h3>
+                <p>Puede ser cariñoso, juguetón y tan especial como cualquier otro gato.</p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="gato">🐱</div>
+                <h3>Gato persa</h3>
+                <p>Suele tener pelo largo, cara redondeada y necesita cepillado frecuente.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="cuidados">
+        <h2 class="titulo">💗 ¿Cómo cuidar a un michi?</h2>
+
+        <div class="dato">
+            <h3>🥣 Alimentación</h3>
+            <p>Dale alimento adecuado para su edad y agua fresca todos los días.</p>
+        </div>
+
+        <div class="dato">
+            <h3>🧼 Higiene</h3>
+            <p>Mantén limpio su arenero y cepilla su pelaje cuando lo necesite.</p>
+        </div>
+
+        <div class="dato">
+            <h3>🧶 Juego y cariño</h3>
+            <p>Dedícale tiempo para jugar y prepara un lugar seguro donde pueda descansar.</p>
+        </div>
+
+        <div class="dato">
+            <h3>🩺 Salud</h3>
+            <p>Llévalo al veterinario para revisiones y vacunas recomendadas.</p>
+        </div>
+    </section>
+
+    <section id="datos">
+        <h2 class="titulo">✨ Curiosidades gatunas</h2>
+
+        <div class="tarjetas">
+            <article class="tarjeta">
+                <div class="gato">👂</div>
+                <h3>Oídos increíbles</h3>
+                <p>Los gatos pueden escuchar sonidos agudos que las personas no perciben fácilmente.</p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="gato">😴</div>
+                <h3>¡A dormir!</h3>
+                <p>Los gatos adultos suelen dormir muchas horas durante el día.</p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="gato">🐾</div>
+                <h3>Sus bigotes</h3>
+                <p>Les ayudan a percibir su entorno y orientarse en espacios cercanos.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>🐾 Cat World | Hecho con 💗 para los amantes de los michis</p>
+    <p>¡Todos los gatitos merecen amor y cuidado! 🐱</p>
+    <p><a href="#inicio" style="color:#ff9cde;">Volver al inicio ↑</a></p>
+</footer>
+
+</body>
+</html>
